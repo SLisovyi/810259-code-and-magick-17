@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Sergii Lisovyi](https://up.htmlacademy.ru/javascript/17/user/810259).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Тимоновский].
 
 ---
 
