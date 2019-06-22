@@ -28,11 +28,8 @@ var getMaxElement = function (arr) {
 };
 
 // находим рандомный цвет
-var getEnemiesColor = function (mass) {
-  var color = 'rgba(0, 0, 255, 0.' + Math.floor(3 + Math.random() * 9) + ')';
-  if (mass === 'Вы') {
-    color = 'rgba(255, 0, 0, 1)';
-  }
+var getEnemiesColor = function () {
+  var color = 'rgba(0, 0, 255, 0.' + Math.floor(1 + Math.random() * 9) + ')';
   return color;
 };
 
@@ -52,7 +49,7 @@ window.renderStatistics = function (ctx, players, times) {
 
     ctx.fillText(players[i], CLOUD_X + GAP + FONT_GAP + (BAR_WIDTH + BAR_GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP);
 
-    ctx.fillStyle = getEnemiesColor(players);
+    ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : getEnemiesColor();
     ctx.fillRect(CLOUD_X + GAP + FONT_GAP + (BAR_WIDTH + BAR_GAP) * i, barY - barHeigth, BAR_WIDTH, barHeigth);
   }
 
