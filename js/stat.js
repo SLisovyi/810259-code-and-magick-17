@@ -49,7 +49,14 @@ window.renderStatistics = function (ctx, players, times) {
 
     ctx.fillText(players[i], CLOUD_X + GAP + FONT_GAP + (BAR_WIDTH + BAR_GAP) * i, CLOUD_Y + CLOUD_HEIGHT - GAP);
 
-    ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : getEnemiesColor();
+    // ctx.fillStyle = (players[i] === 'Вы') ? 'rgba(255, 0, 0, 1)' : getEnemiesColor();
+
+    if (players[i] === 'Вы') {
+      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+    } else {
+      ctx.fillStyle = getEnemiesColor();
+    }
+
     ctx.fillRect(CLOUD_X + GAP + FONT_GAP + (BAR_WIDTH + BAR_GAP) * i, barY - barHeigth, BAR_WIDTH, barHeigth);
   }
 
