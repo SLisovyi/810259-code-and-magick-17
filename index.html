@@ -66,7 +66,7 @@
   
 
   <div class="setup-open">
-    <img src="./img/user-1.jpg" class="setup-open-icon">
+    <img src="./img/user-1.jpg" class="setup-open-icon" tabindex="0">
   </div>
 </header>
 
@@ -84,7 +84,7 @@
         </div>
         <label>
           <input type="text" name="username"
-                 maxlength="25" required
+                 maxlength="25" minlength="25" required
                  class="setup-user-name" value="Синий Пендальф"/>
         </label>
       </div>
@@ -118,13 +118,13 @@
             </g>
           </svg>
         </div>
-        <input type="hidden" name="coat-color" value="rgb(101, 137, 164)">
-        <input type="hidden" name="eyes-color" value="black">
+        <input type="hiden" name="coat-color" value="rgb(101, 137, 164)">
+        <input type="hiden" name="eyes-color" value="black">
       </div>
 
       <div class="setup-fireball-wrap">
         <div class="setup-fireball"></div>
-        <input type="hidden" name="fireball-color" value="#ee4830">
+        <input type="hiden" name="fireball-color" value="#ee4830">
       </div>
 
       <div class="setup-artifacts" dropzone="move">
